@@ -1,0 +1,12 @@
+[
+  {
+    "Username": "dsagfsadgasdfad",
+    "Password": "dasfasdfasdfasd",
+    "Hostname": "asubdomain.example.com"
+  },
+  {
+    "Username": "dasfsdafasdfasd",
+    "Password": "hgfsdhgdgshgdfh",
+    "Hostname": "anothersubdomain.example.com"
+  }
+]
