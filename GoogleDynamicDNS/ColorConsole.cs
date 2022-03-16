@@ -122,14 +122,14 @@ using System.Text.RegularExpressions;
             if (string.IsNullOrEmpty(headerText))
                 return;
 
-            string line = new string(wrapperChar, headerText.Length);
+            string line = new(wrapperChar, headerText.Length);
 
             WriteLine(line, dashColor);
             WriteLine(headerText, headerColor);
             WriteLine(line, dashColor);
         }
 
-        private static Lazy<Regex> colorBlockRegEx = new Lazy<Regex>(
+        private static readonly Lazy<Regex> colorBlockRegEx = new(
             () => new Regex("\\[(?<color>.*?)\\](?<text>[^[]*)\\[/\\k<color>\\]", RegexOptions.IgnoreCase),
             isThreadSafe: true);
 
@@ -168,7 +168,7 @@ using System.Text.RegularExpressions;
                 }
 
                 // write up to expression
-                Write(text.Substring(0, match.Index), baseTextColor);
+                Write(text[..match.Index], baseTextColor);
 
                 // strip out the expression
                 string highlightText = match.Groups["text"].Value;
@@ -177,7 +177,7 @@ using System.Text.RegularExpressions;
                 Write(highlightText, colorVal);
 
                 // remainder of string
-                text = text.Substring(match.Index + match.Value.Length);
+                text = text[(match.Index + match.Value.Length)..];
             }
 
             Console.WriteLine();

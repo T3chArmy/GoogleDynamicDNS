@@ -1,12 +1,15 @@
-[
-  {
-    "Username": "dsagfsadgasdfad",
-    "Password": "dasfasdfasdfasd",
-    "Hostname": "asubdomain.example.com"
-  },
-  {
-    "Username": "dasfsdafasdfasd",
-    "Password": "hgfsdhgdgshgdfh",
-    "Hostname": "anothersubdomain.example.com"
-  }
-]
+{
+  "UpdateFrequency": 300000,
+  "Hosts": [
+    {
+      "Username": "dsagfsadgasdfad",
+      "Password": "dasfasdfasdfasd",
+      "Hostname": "asubdomain.example.com"
+    },
+    {
+      "Username": "dasfsdafasdfasd",
+      "Password": "hgfsdhgdgshgdfh",
+      "Hostname": "anothersubdomain.example.com"
+    }
+  ]
+}
