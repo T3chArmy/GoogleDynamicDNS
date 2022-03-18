@@ -24,9 +24,9 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish
+      run: dotnet publish -c Release
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: Build Artifacts
-        path: D:\a\GoogleDynamicDNS\GoogleDynamicDNS\GoogleDynamicDNS\bin\Debug\net6.0\publish\
+        path: D:\a\GoogleDynamicDNS\GoogleDynamicDNS\GoogleDynamicDNS\bin\Release\net6.0\publish\
